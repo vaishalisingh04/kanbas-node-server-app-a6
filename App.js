@@ -16,7 +16,7 @@ import UserRoutes from "./Users/routes.js";
 import cors from 'cors';
 import session from "express-session";
 const app = express();
-const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas"
+const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kambaz"
 mongoose.connect(CONNECTION_STRING,{ 
   useNewUrlParser: true, 
   useUnifiedTopology: true, 
@@ -24,7 +24,7 @@ mongoose.connect(CONNECTION_STRING,{
 });
 
 const sessionOptions = {
-  secret: process.env.SESSION_SECRET || "kanbas",
+  secret: process.env.SESSION_SECRET || "kambaz",
   resave: false,
   saveUninitialized: false,
 };
